@@ -16,10 +16,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         setUpTabs()
         val actionbar = supportActionBar
-        //set actionbar title
         actionbar!!.title = "公車動態介面"
-        //set back button
-        actionbar.setDisplayHomeAsUpEnabled(true)
         actionbar.setDisplayHomeAsUpEnabled(true)
         val adapter = ArrayAdapter.createFromResource(
             this,
@@ -30,9 +27,8 @@ class MainActivity : AppCompatActivity() {
     }
     private fun setUpTabs(){
         val adapter=ViewPagerAdapter(supportFragmentManager)
-        adapter.addFragment(HomeFragment(), "Home")
-        adapter.addFragment(FavoritesFragment(), "Favorites")
-        adapter.addFragment(SettingsFragment(), "Settings")
+        adapter.addFragment(HomeFragment(), "222")
+        adapter.addFragment(FavoritesFragment(), "72")
         viewPager.adapter=adapter
         tabs.setupWithViewPager(viewPager)
     }
@@ -40,6 +36,10 @@ class MainActivity : AppCompatActivity() {
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         val inflater = menuInflater
         inflater.inflate(R.menu.menu, menu)
+        return true
+    }
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
         return true
     }
 }
