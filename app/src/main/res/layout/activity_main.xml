@@ -7,26 +7,27 @@
     tools:context=".MainActivity">
 
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/appBarLayout"
+    <Spinner
+        android:id="@+id/spinner"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content" />
 
-        <com.google.android.material.tabs.TabLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/tabs"
-            app:tabBackground="@color/black"
-            app:tabGravity="fill"
-            app:tabInlineLabel="true"
-            app:tabMode="fixed"
-            app:tabTextAppearance="@style/CustomTabStyle"
-            app:tabTextColor="@android:color/white" />
-    </com.google.android.material.appbar.AppBarLayout>
+    <com.google.android.material.tabs.TabLayout
+        android:layout_below="@id/spinner"
+        android:layout_marginBottom="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tabs"
+        app:tabBackground="@color/black"
+        app:tabGravity="fill"
+        app:tabInlineLabel="true"
+        app:tabMode="fixed"
+        app:tabTextAppearance="@style/CustomTabStyle"
+        app:tabTextColor="@android:color/white" />
 
     <androidx.viewpager.widget.ViewPager
+        android:layout_below="@id/tabs"
         android:id="@+id/viewPager"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/appBarLayout" />
+        android:layout_height="match_parent" />
 </RelativeLayout>
