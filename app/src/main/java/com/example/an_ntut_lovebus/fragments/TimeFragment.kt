@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.an_ntut_lovebus.R
 
-class SettingsFragment : Fragment() {
+class TimeFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -18,6 +18,6 @@ class SettingsFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_settings, container, false)
+        return inflater.inflate(R.layout.fragment_time, container, false)
     }
 }
