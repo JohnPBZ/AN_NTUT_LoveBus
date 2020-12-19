@@ -8,12 +8,12 @@ import com.example.an_ntut_lovebus.fragments.FavoritesFragment
 import com.example.an_ntut_lovebus.fragments.HomeFragment
 import com.example.an_ntut_lovebus.fragments.SettingsFragment
 import com.example.an_ntut_lovebus.fragments.adapters.ViewPagerAdapter
-import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_bus_information.*
 
-class MainActivity : AppCompatActivity() {
+class BusInformation : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_bus_information)
         setUpTabs()
         val actionbar = supportActionBar
         actionbar!!.title = "公車動態介面"
